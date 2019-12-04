@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "440868215403",
+    "firebase_url": "https://umka-16d27.firebaseio.com",
+    "project_id": "umka-16d27",
+    "storage_bucket": "umka-16d27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440868215403:android:5461feae88a3d5d2",
+        "android_client_info": {
+          "package_name": "endroad.dl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440868215403-os70gq9plug33i91j6s0c26o8jrmqphr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "endroad.dl",
+            "certificate_hash": "0c8305b43fdf1b1d13000c522b3dea6008cfbaf9"
+          }
+        },
+        {
+          "client_id": "440868215403-jf3f34mcbvjgcq699v2o7iq9sphepdhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByHCnIKxWs1qboaYAHRj8jIkXs6II9iQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440868215403-jf3f34mcbvjgcq699v2o7iq9sphepdhs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

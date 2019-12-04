@@ -1,0 +1,32 @@
+[
+	{
+		"name":"Наталья Магурина",
+		"post":"президент",
+		"link":"https://vk.com/natasha_magurina",
+		"imagePath":"link_image/natasha_magurina.jpg"
+	},
+	{
+		"name":"Анна Мазовская",
+		"post":"старший советник",
+		"link":"https://vk.com/mazovskaya",
+		"imagePath":"link_image/mazovskaya.jpg"
+	},
+	{
+		"name":"Никита Мещеряков",
+		"post":"старший советник",
+		"link":"https://vk.com/nikeetqa",
+		"imagePath":"link_image/nikeetqa.jpg"
+	},
+	{
+		"name":"Елена Смолина",
+		"post":"советник",
+		"link":"https://vk.com/teeeeeeeee",
+		"imagePath":"link_image/teeeeeeeee.jpg"
+	},
+	{
+		"name":"Татьяна Дукельская",
+		"post":"советник",
+		"link":"https://vk.com/tanusha199",
+		"imagePath":"link_image/tanusha199.jpg"
+	}
+]
