@@ -40,7 +40,7 @@ class RatingActivity : ActivityExtendNavigation() {
 
 	override fun onPostResume() {
 		super.onPostResume()
-		loadFactoryArrayFromAssets()
+		loadEnterpriseArrayFromAssets()
 	}
 
 	override fun onClick(view: View) {}

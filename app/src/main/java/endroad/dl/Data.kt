@@ -1,23 +1,22 @@
 package endroad.dl
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import com.google.firebase.database.FirebaseDatabase
-import endroad.dl.models.Factory
+import endroad.dl.models.Enterprise
 import endroad.dl.models.Link
 import org.json.JSONArray
 import java.util.*
 
 val databaseReference = FirebaseDatabase.getInstance().reference ?: throw NullPointerException()
-val factoryList = ArrayList<Factory>()
+val factoryList = ArrayList<Enterprise>()
 val linkList = ArrayList<Link>()
 
-fun Context.loadFactoryArrayFromAssets() {
+fun Context.loadEnterpriseArrayFromAssets() {
 	runCatching {
 		val jsonArray = JSONArray(getStringFromAssetFile("factory"))
 		factoryList.clear()
 		for (i in 0 until jsonArray.length()) {
-			factoryList.add(Factory.fromJSON(jsonArray.getJSONObject(i)))
+			factoryList.add(Enterprise.fromJSON(jsonArray.getJSONObject(i)))
 		}
 	}
 }

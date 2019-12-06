@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import endroad.dl.models.Factory
+import endroad.dl.models.Enterprise
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.load
 
@@ -34,7 +34,7 @@ class FactoryActivity : ActivityExtendNavigation() {
 	}
 
 	override fun onClick(view: View) {}
-	private inner class FactoryAdapter internal constructor(val factoryList: List<Factory>, val context: Context) :
+	private inner class FactoryAdapter internal constructor(val enterpriseList: List<Enterprise>, val context: Context) :
 		RecyclerView.Adapter<FactoryAdapter.ViewHolder>() {
 
 		internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
@@ -64,12 +64,12 @@ class FactoryActivity : ActivityExtendNavigation() {
 		}
 
 		override fun onBindViewHolder(ViewHolder: ViewHolder, i: Int) {
-			ViewHolder.name.text = factoryList[i].name
-			ViewHolder.image.load(factoryList[i].imagePath)
+			ViewHolder.name.text = enterpriseList[i].name
+			ViewHolder.image.load(enterpriseList[i].imagePath)
 		}
 
 		override fun getItemCount(): Int {
-			return factoryList.size
+			return enterpriseList.size
 		}
 	}
 }
