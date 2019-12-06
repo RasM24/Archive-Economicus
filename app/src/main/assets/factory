@@ -6,7 +6,7 @@
 		<br><b>Приносимая прибыль:</b> 1500
 		<br><b>Местоположение:</b> Orange District
 ",
-		"imagePath":"factory_icon/avia.png"
+		"imagePath":"file:///android_asset/factory_icon/avia.png"
 	},
 	{
 		"name": "Автомобильный завод",
@@ -16,7 +16,7 @@
 		<br><b>Приносимая прибыль:</b> 1500
 		<br><b>Местоположение:</b> Yellow District
 ",
-		"imagePath":"factory_icon/auto.png"
+		"imagePath":"file:///android_asset/factory_icon/auto.png"
 	},
 	{
 		"name": "Заводы безалкогольных напитков",
@@ -26,7 +26,7 @@
 		<br><b>Приносимая прибыль:</b> 1200
 		<br><b>Местоположение:</b> Green District
 ",
-		"imagePath":"factory_icon/liquor.png"
+		"imagePath":"file:///android_asset/factory_icon/liquor.png"
 	},
 	{
 		"name": "Ювелирный завод",
@@ -36,7 +36,7 @@
 		<br><b>Приносимая прибыль:</b> 1500
 		<br><b>Местоположение:</b> Red District
 ",
-		"imagePath":"factory_icon/jeweler.png"
+		"imagePath":"file:///android_asset/factory_icon/jeweler.png"
 	},
 	{
 		"name": "Верфь",
@@ -46,7 +46,7 @@
 		<br><b>Приносимая прибыль:</b> 1500
 		<br><b>Местоположение:</b> Green District
 ",
-		"imagePath":"factory_icon/dockyard.png"
+		"imagePath":"file:///android_asset/factory_icon/dockyard.png"
 	},
 	{
 		"name": "Фабрика одежды",
@@ -56,7 +56,7 @@
 		<br><b>Приносимая прибыль:</b> 1200
 		<br><b>Местоположение:</b> Yellow District
 		",
-		"imagePath":"factory_icon/clothes.png"
+		"imagePath":"file:///android_asset/factory_icon/clothes.png"
 	},
 	{
 		"name": "Кафе",
@@ -65,7 +65,7 @@
 		<br><b>Приносимая прибыль:</b> 600
 		<br><b>Местоположение:</b> Green District
 ",
-		"imagePath":"factory_icon/cafe.png"
+		"imagePath":"file:///android_asset/factory_icon/cafe.png"
 	},
 	{
 		"name": "Ферма",
@@ -76,7 +76,7 @@
 		<br><b>Приносимая прибыль:</b> 900
 		<br><b>Местоположение:</b> Yellow District
 ",
-		"imagePath":"factory_icon/farm.png"
+		"imagePath":"file:///android_asset/factory_icon/farm.png"
 	},
 	{
 		"name": "Супермаркет",
@@ -85,7 +85,7 @@
 		<br><b>Приносимая прибыль:</b> 1200
 		<br><b>Местоположение:</b> Yellow District
 ",
-		"imagePath":"factory_icon/shop.png"
+		"imagePath":"file:///android_asset/factory_icon/shop.png"
 	},
 	{
 		"name": "Салон красоты",
@@ -94,7 +94,7 @@
 		<br><b>Приносимая прибыль:</b> 600
 		<br><b>Местоположение:</b> Yellow District
 ",
-		"imagePath":"factory_icon/beaty_shop.png"
+		"imagePath":"file:///android_asset/factory_icon/beaty_shop.png"
 	},
 	{
 		"name": "Торговый центр",
@@ -104,7 +104,7 @@
 		<br><b>Приносимая прибыль:</b> 1200
 		<br><b>Местоположение:</b> Red District
 ",
-		"imagePath":"factory_icon/mail.png"
+		"imagePath":"file:///android_asset/factory_icon/mail.png"
 	},
 	{
 		"name": "Спортивная арена",
@@ -114,7 +114,7 @@
 		<br><b>Приносимая прибыль:</b> 900
 		<br><b>Местоположение:</b> Orange District
 ",
-		"imagePath":"factory_icon/sport.png"
+		"imagePath":"file:///android_asset/factory_icon/sport.png"
 	},
 	{
 		"name": "Парк развлечений",
@@ -123,7 +123,7 @@
 		<br><b>Приносимая прибыль:</b> 900
 		<br><b>Местоположение:</b> Red District
 ",
-		"imagePath":"factory_icon/park.png"
+		"imagePath":"file:///android_asset/factory_icon/park.png"
 	},
 	{
 		"name": "Школа танцев",
@@ -132,7 +132,7 @@
 		<br><b>Приносимая прибыль:</b> 600
 		<br><b>Местоположение:</b> Red District
 ",
-		"imagePath":"factory_icon/dance.png"
+		"imagePath":"file:///android_asset/factory_icon/dance.png"
 	},
 	{
 		"name": "Аквапарк",
@@ -141,7 +141,7 @@
 		<br><b>Приносимая прибыль:</b> 900
 		<br><b>Местоположение:</b> Green District
 ",
-		"imagePath":"factory_icon/aqua.png"
+		"imagePath":"file:///android_asset/factory_icon/aqua.png"
 	},
 	{
 		"name": "Мельница",
@@ -150,6 +150,6 @@
 		<br><b>Приносимая прибыль:</b> 600
 		<br><b>Местоположение:</b> Orange District
 ",
-		"imagePath":"factory_icon/mill.png"
+		"imagePath":"file:///android_asset/factory_icon/mill.png"
 	}
 ]

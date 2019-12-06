@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import endroad.dl.models.Factory
 import kotlinx.android.synthetic.main.activity_list.*
+import ru.endroad.arena.data.load
 
 /**
  * Created by dvoly on 27.02.2017.
@@ -64,7 +65,7 @@ class FactoryActivity : ActivityExtendNavigation() {
 
 		override fun onBindViewHolder(ViewHolder: ViewHolder, i: Int) {
 			ViewHolder.name.text = factoryList[i].name
-			ViewHolder.image.setImageDrawable(loadImageFromAsset(factoryList[i].imagePath))
+			ViewHolder.image.load(factoryList[i].imagePath)
 		}
 
 		override fun getItemCount(): Int {

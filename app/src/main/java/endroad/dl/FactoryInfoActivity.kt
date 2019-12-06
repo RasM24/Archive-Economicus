@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.text.Html
 import kotlinx.android.synthetic.main.dialog_factory_info.*
+import ru.endroad.arena.data.load
 
 /**
  * Created by dvoly on 28.02.2017.
@@ -18,6 +19,6 @@ class FactoryInfoActivity : Activity() {
 
 		text_name.text = factory.name
 		text_information.text = Html.fromHtml(factory.information)
-		image.setImageDrawable(loadImageFromAsset(factory.imagePath))
+		image.load(factory.imagePath)
 	}
 }
