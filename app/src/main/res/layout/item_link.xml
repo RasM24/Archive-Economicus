@@ -6,7 +6,7 @@
 	android:orientation="horizontal"
 	android:padding="5dp">
 
-	<endroad.dl.support.ImageCircle
+	<ImageView
 		android:id="@+id/image"
 		android:layout_width="70dp"
 		android:layout_height="70dp"

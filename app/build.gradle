@@ -50,5 +50,5 @@ dependencies {
 	implementation 'com.google.firebase:firebase-auth:19.2.0'
 	implementation 'com.google.firebase:firebase-database:19.2.0'
 	implementation 'com.google.firebase:firebase-messaging:20.0.1'
-	implementation 'ru.endroad:arena:2.1.1'
+	implementation 'ru.endroad:arena:2.1.2'
 }
