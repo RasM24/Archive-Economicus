@@ -32,6 +32,7 @@ fun Context.loadLinkArrayFromAssets() {
 	}
 }
 
+@Deprecated("Необходимо использоать Picasso")
 fun Context.loadImageFromAsset(path: String): Drawable? {
 	runCatching {
 		val ims = assets.open(path)

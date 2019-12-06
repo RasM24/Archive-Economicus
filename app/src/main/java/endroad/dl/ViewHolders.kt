@@ -4,9 +4,9 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 import endroad.dl.models.News
 import endroad.dl.models.Schedule
+import ru.endroad.arena.data.load
 
 class ViewHolders {
 
@@ -17,7 +17,7 @@ class ViewHolders {
 
 		fun bindData(news: News) {
 			mTextField.text = news.bodyText
-			Picasso.with(mImageField.context).load(news.imageURL).into(mImageField)
+			news.imageURL?.let(mImageField::load)
 		}
 	}
 
