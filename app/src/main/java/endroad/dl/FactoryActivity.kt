@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import endroad.dl.data.EnterpriseDataSource
 import endroad.dl.models.Enterprise
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.load
@@ -22,6 +23,8 @@ class FactoryActivity : ActivityExtendNavigation() {
 
 	override val idChecked = R.id.nav_factory
 
+	private val enterpriseDataSource = EnterpriseDataSource()
+
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
@@ -30,7 +33,7 @@ class FactoryActivity : ActivityExtendNavigation() {
 		val linearLayoutManager = LinearLayoutManager(this)
 		recycleList.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
 		recycleList.layoutManager = linearLayoutManager
-		recycleList.adapter = FactoryAdapter(factoryList, this)
+		recycleList.adapter = FactoryAdapter(enterpriseDataSource.getList(), this)
 	}
 
 	override fun onClick(view: View) {}

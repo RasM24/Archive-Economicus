@@ -38,10 +38,5 @@ class RatingActivity : ActivityExtendNavigation() {
 		recycleList.adapter = firebaseAdapter
 	}
 
-	override fun onPostResume() {
-		super.onPostResume()
-		loadEnterpriseArrayFromAssets()
-	}
-
 	override fun onClick(view: View) {}
 }

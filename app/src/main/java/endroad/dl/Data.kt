@@ -7,19 +7,8 @@ import endroad.dl.models.Link
 import org.json.JSONArray
 import java.util.*
 
-val databaseReference = FirebaseDatabase.getInstance().reference ?: throw NullPointerException()
-val factoryList = ArrayList<Enterprise>()
+val databaseReference = FirebaseDatabase.getInstance().reference
 val linkList = ArrayList<Link>()
-
-fun Context.loadEnterpriseArrayFromAssets() {
-	runCatching {
-		val jsonArray = JSONArray(getStringFromAssetFile("factory"))
-		factoryList.clear()
-		for (i in 0 until jsonArray.length()) {
-			factoryList.add(Enterprise.fromJSON(jsonArray.getJSONObject(i)))
-		}
-	}
-}
 
 fun Context.loadLinkArrayFromAssets() {
 	runCatching {
