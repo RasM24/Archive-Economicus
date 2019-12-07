@@ -52,7 +52,7 @@
 			android:label="@string/nMap"
 			android:launchMode="singleInstance" />
 		<activity
-			android:name=".EnterpriseInfoActivity"
+			android:name=".view.EnterpriseInfoDialogFragment"
 			android:theme="@style/Theme.AppCompat.Dialog" />
 
 		<service

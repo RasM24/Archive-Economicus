@@ -69,6 +69,10 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 			?.let(::startActivity)
 	}
 
+	fun toEnterpriseInfo(position: Int) {
+		EnterpriseInfoDialogFragment.newInstance(position).show(fragmentManager, null)
+	}
+
 	private companion object {
 		//вынести в datasource
 		const val LINK_VK = "https://vk.com/umka_forever"

@@ -1,6 +1,5 @@
 package endroad.dl.view
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import endroad.dl.EnterpriseInfoActivity
 import endroad.dl.R
 import endroad.dl.data.EnterpriseDataSource
 import endroad.dl.models.Enterprise
@@ -53,12 +51,9 @@ class EnterprisesFragment : BaseFragment() {
 			override fun onClick(view: View) {
 				val position = adapterPosition
 				if (position != RecyclerView.NO_POSITION) {
-					val intent = Intent(requireContext(), EnterpriseInfoActivity::class.java)
-					intent.putExtra("enterpriseId", position)
-					startActivity(intent)
+					(requireActivity() as SingleActivity).toEnterpriseInfo(position)
 				}
 			}
-
 		}
 
 		override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
