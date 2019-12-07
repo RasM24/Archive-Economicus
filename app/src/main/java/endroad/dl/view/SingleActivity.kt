@@ -8,7 +8,10 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
-import endroad.dl.*
+import endroad.dl.EnterpisesActivity
+import endroad.dl.R
+import endroad.dl.RatingActivity
+import endroad.dl.ScheduleActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
 import kotlinx.android.synthetic.main.activity_main_navigation.*
@@ -42,11 +45,11 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 		when (item.itemId) {
 			R.id.nav_news    -> fragmentManager.changeRoot(NewsFragment.newInstance())
 			R.id.nav_contact -> fragmentManager.changeRoot(ContactFragment.newInstance())
+			R.id.nav_map     -> fragmentManager.changeRoot(MapFragment.newInstance())
 		}
 
 		val activity = when (item.itemId) {
 			R.id.nav_enterprise -> EnterpisesActivity::class.java
-			R.id.nav_map        -> MapActivity::class.java
 			R.id.nav_rating     -> RatingActivity::class.java
 			R.id.nav_schedule   -> ScheduleActivity::class.java
 			else                -> null
