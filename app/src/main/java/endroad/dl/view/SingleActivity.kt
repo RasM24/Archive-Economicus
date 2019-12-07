@@ -8,7 +8,6 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
-import endroad.dl.EnterpisesActivity
 import endroad.dl.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
@@ -41,24 +40,13 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
-			R.id.nav_news     -> fragmentManager.changeRoot(NewsFragment.newInstance())
-			R.id.nav_contact  -> fragmentManager.changeRoot(ContactFragment.newInstance())
-			R.id.nav_map      -> fragmentManager.changeRoot(MapFragment.newInstance())
-			R.id.nav_rating   -> fragmentManager.changeRoot(RatingFragment.newInstance())
-			R.id.nav_schedule -> fragmentManager.changeRoot(ScheduleFragment.newInstance())
+			R.id.nav_schedule   -> fragmentManager.changeRoot(ScheduleFragment.newInstance())
+			R.id.nav_news       -> fragmentManager.changeRoot(NewsFragment.newInstance())
+			R.id.nav_rating     -> fragmentManager.changeRoot(RatingFragment.newInstance())
+			R.id.nav_enterprise -> fragmentManager.changeRoot(EnterprisesFragment.newInstance())
+			R.id.nav_map        -> fragmentManager.changeRoot(MapFragment.newInstance())
+			R.id.nav_contact    -> fragmentManager.changeRoot(ContactFragment.newInstance())
 		}
-
-		val activity = when (item.itemId) {
-			R.id.nav_enterprise -> EnterpisesActivity::class.java
-			else                -> null
-		}
-
-		activity
-			?.run { Intent(baseContext, this) }
-			?.let {
-				startActivity(it)
-				overridePendingTransition(R.anim.activity, R.anim.alpha)
-			}
 
 		drawer.closeDrawer(GravityCompat.START)
 		return true

@@ -49,23 +49,6 @@ abstract class ActivityExtendNavigation : AppCompatActivity(), NavigationView.On
 			?.let(::startActivity)
 	}
 
-	override fun onNavigationItemSelected(item: MenuItem): Boolean {
-		val activity = when (item.itemId) {
-			R.id.nav_enterprise -> EnterpisesActivity::class.java
-			else                -> null
-		}
-
-		activity
-			?.run { Intent(baseContext, this) }
-			?.let {
-				startActivity(it)
-				overridePendingTransition(R.anim.activity, R.anim.alpha)
-			}
-
-		drawer_layout.closeDrawer(GravityCompat.START)
-		return true
-	}
-
 	private companion object {
 		const val LINK_VK = "https://vk.com/umka_forever"
 		const val LINK_INSTA = "https://www.instagram.com/umka_bk/"
