@@ -1,4 +1,4 @@
-package endroad.dl.view
+package endroad.dl.application
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import endroad.dl.R
+import endroad.dl.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
 import kotlinx.android.synthetic.main.activity_main_navigation.*

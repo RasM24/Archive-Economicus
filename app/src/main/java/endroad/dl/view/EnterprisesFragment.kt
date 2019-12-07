@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import endroad.dl.R
+import endroad.dl.application.SingleActivity
 import endroad.dl.data.EnterpriseDataSource
 import endroad.dl.models.Enterprise
 import kotlinx.android.synthetic.main.activity_list.*

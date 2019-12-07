@@ -4,10 +4,9 @@
 	package="endroad.dl">
 
 	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETE" />
 
 	<application
-		android:name=".App"
+		android:name=".application.App"
 		android:allowBackup="true"
 		android:icon="@mipmap/ic_launcher"
 		android:label="@string/app_name"
@@ -15,7 +14,7 @@
 		android:theme="@style/AppTheme.NoActionBar"
 		tools:ignore="GoogleAppIndexingWarning">
 		<activity
-			android:name=".SplashScreenActivity"
+			android:name=".application.SplashScreenActivity"
 			android:launchMode="singleInstance"
 			android:theme="@style/SplashTheme">
 			<intent-filter>
@@ -25,44 +24,9 @@
 			</intent-filter>
 
 		</activity>
-		<activity android:name=".view.SingleActivity" />
 
-		<activity
-			android:name=".NewsActivity"
-			android:label="@string/nNews"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".EnterpisesActivity"
-			android:label="@string/nEnterprise"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".RatingActivity"
-			android:label="@string/nRating"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".ScheduleActivity"
-			android:label="@string/nShedule"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".ContactActivity"
-			android:label="@string/nContact"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".MapActivity"
-			android:label="@string/nMap"
-			android:launchMode="singleInstance" />
-		<activity
-			android:name=".view.EnterpriseInfoDialogFragment"
-			android:theme="@style/Theme.AppCompat.Dialog" />
+		<activity android:name=".application.SingleActivity" />
 
-		<service
-			android:name=".messageService"
-			android:enabled="true"
-			android:stopWithTask="false">
-			<intent-filter>
-				<action android:name="com.google.firebase.MESSAGING_EVENT" />
-			</intent-filter>
-		</service>
 	</application>
 
 </manifest>
