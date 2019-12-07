@@ -17,6 +17,7 @@ allprojects {
 		google()
 		mavenCentral()
 		mavenLocal()
+		maven { url 'https://endroad.bintray.com/maven/' }
 	}
 }
 

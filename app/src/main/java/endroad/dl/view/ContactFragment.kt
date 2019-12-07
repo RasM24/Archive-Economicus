@@ -1,41 +1,42 @@
-package endroad.dl
+package endroad.dl.view
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import endroad.dl.R
 import endroad.dl.data.ContactDataSource
 import endroad.dl.models.Contact
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.CircleTransform
 import ru.endroad.arena.data.load
+import ru.endroad.arena.viewlayer.fragment.BaseFragment
 
-class ContactActivity : ActivityExtendNavigation() {
+class ContactFragment : BaseFragment() {
 
-	override val idChecked = R.id.nav_contact
-
-	private val mLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
+	override val layout = R.layout.base_fragment_list
 
 	private val contactDataSource = ContactDataSource()
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_list)
-
-		recycleList.setHasFixedSize(true)
-		recycleList.layoutManager = mLayoutManager
-		recycleList.addItemDecoration(DividerItemDecoration(baseContext, mLayoutManager.orientation))
-		recycleList.adapter = LinkAdapter(contactDataSource.getContactList())
+	//Избыточность BaseFragment.. Уберется в будущем из модуля Arena
+	override fun setupViewModel() {
+		val mLayoutManager = LinearLayoutManager(requireContext())
+		list.setHasFixedSize(true)
+		list.layoutManager = mLayoutManager
+		list.addItemDecoration(DividerItemDecoration(requireContext(), mLayoutManager.orientation))
+		list.adapter = LinkAdapter(contactDataSource.getContactList())
 	}
 
-	override fun onClick(view: View) {}
+	companion object {
+		fun newInstance(): Fragment = ContactFragment()
+	}
 
 	private inner class LinkAdapter(val list: List<Contact>) :
 		RecyclerView.Adapter<LinkAdapter.ViewHolder>() {
@@ -76,3 +77,4 @@ class ContactActivity : ActivityExtendNavigation() {
 			list.size
 	}
 }
+

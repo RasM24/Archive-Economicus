@@ -1,43 +1,42 @@
-package endroad.dl
+package endroad.dl.view
 
-import android.content.Context
-import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import endroad.dl.R
+import endroad.dl.application.SingleActivity
 import endroad.dl.data.EnterpriseDataSource
 import endroad.dl.models.Enterprise
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.load
+import ru.endroad.arena.viewlayer.fragment.BaseFragment
 
-/**
- * Created by dvoly on 27.02.2017.
- */
-class EnterpisesActivity : ActivityExtendNavigation() {
-
-	override val idChecked = R.id.nav_enterprise
+class EnterprisesFragment : BaseFragment() {
 
 	private val enterpriseDataSource = EnterpriseDataSource()
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_list)
+	override val layout = R.layout.base_fragment_list
 
-		recycleList.setHasFixedSize(true)
-		val linearLayoutManager = LinearLayoutManager(this)
-		recycleList.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
-		recycleList.layoutManager = linearLayoutManager
-		recycleList.adapter = EnterpriseAdapter(enterpriseDataSource.getList(), this)
+	//Избыточность BaseFragment.. Уберется в будущем из модуля Arena
+	override fun setupViewModel() {
+		val mLayoutManager = LinearLayoutManager(requireContext())
+		list.setHasFixedSize(true)
+		list.layoutManager = mLayoutManager
+		list.addItemDecoration(DividerItemDecoration(requireContext(), mLayoutManager.orientation))
+		list.adapter = EnterpriseAdapter(enterpriseDataSource.getList())
 	}
 
-	override fun onClick(view: View) {}
-	private inner class EnterpriseAdapter internal constructor(val enterpriseList: List<Enterprise>, val context: Context) :
+	companion object {
+		fun newInstance(): Fragment = EnterprisesFragment()
+	}
+
+	private inner class EnterpriseAdapter internal constructor(val enterpriseList: List<Enterprise>) :
 		RecyclerView.Adapter<EnterpriseAdapter.ViewHolder>() {
 
 		internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
@@ -53,12 +52,9 @@ class EnterpisesActivity : ActivityExtendNavigation() {
 			override fun onClick(view: View) {
 				val position = adapterPosition
 				if (position != RecyclerView.NO_POSITION) {
-					val intent = Intent(applicationContext, EnterpriseInfoActivity::class.java)
-					intent.putExtra("enterpriseId", position)
-					startActivity(intent)
+					(requireActivity() as SingleActivity).toEnterpriseInfo(position)
 				}
 			}
-
 		}
 
 		override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -76,3 +72,4 @@ class EnterpisesActivity : ActivityExtendNavigation() {
 		}
 	}
 }
+
