@@ -2,7 +2,7 @@ package endroad.dl.models
 
 import org.json.JSONObject
 
-data class Link(val name: String, val post: String, val url: String, val imagePath: String) {
+data class Contact(val name: String, val post: String, val url: String, val imagePath: String) {
 
 	companion object {
 		private const val NAME = "name"
@@ -10,13 +10,13 @@ data class Link(val name: String, val post: String, val url: String, val imagePa
 		private const val IMAGE_PATH = "imagePath"
 		private const val LINK = "link"
 
-		fun fromJSON(json: JSONObject): Link {
+		fun fromJSON(json: JSONObject): Contact {
 			val name = json.optString(NAME, "")
 			val post = json.optString(POST, "")
 			val imagePath = json.optString(IMAGE_PATH, "")
 			val url = json.optString(LINK, "")
 
-			return Link(name, post, url, imagePath)
+			return Contact(name, post, url, imagePath)
 		}
 	}
 

@@ -11,16 +11,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Transformation
-import endroad.dl.models.Link
+import endroad.dl.models.Contact
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.CircleTransform
 import ru.endroad.arena.data.load
-import ru.endroad.arena.data.picasso
 
-class LinkActivity : ActivityExtendNavigation() {
+class ContactActivity : ActivityExtendNavigation() {
 
-	override val idChecked = R.id.nav_link
+	override val idChecked = R.id.nav_contact
 
 	private val mLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
 
@@ -36,11 +34,11 @@ class LinkActivity : ActivityExtendNavigation() {
 
 	override fun onClick(view: View) {}
 
-	private inner class LinkAdapter(val list: List<Link>) :
+	private inner class LinkAdapter(val list: List<Contact>) :
 		RecyclerView.Adapter<LinkAdapter.ViewHolder>() {
 
 		internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-			val cv: View = itemView.findViewById(R.id.link_view)
+			val cv: View = itemView.findViewById(R.id.contact_item)
 			val image: ImageView = itemView.findViewById(R.id.image)
 			val post: TextView = itemView.findViewById(R.id.name)
 			val name: TextView = itemView.findViewById(R.id.post)
@@ -61,7 +59,7 @@ class LinkActivity : ActivityExtendNavigation() {
 		}
 
 		override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-			val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_link, viewGroup, false)
+			val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_contact, viewGroup, false)
 			return ViewHolder(v)
 		}
 

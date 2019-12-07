@@ -39,8 +39,8 @@
 			android:label="@string/nShedule"
 			android:launchMode="singleInstance" />
 		<activity
-			android:name=".LinkActivity"
-			android:label="@string/nLink"
+			android:name=".ContactActivity"
+			android:label="@string/nContact"
 			android:launchMode="singleInstance" />
 		<activity
 			android:name=".MapActivity"
