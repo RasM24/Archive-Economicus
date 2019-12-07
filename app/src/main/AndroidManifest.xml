@@ -27,8 +27,8 @@
 			android:label="@string/nNews"
 			android:launchMode="singleInstance" />
 		<activity
-			android:name=".FactoryActivity"
-			android:label="@string/nFactory"
+			android:name=".EnterpisesActivity"
+			android:label="@string/nEnterprise"
 			android:launchMode="singleInstance" />
 		<activity
 			android:name=".RatingActivity"
@@ -39,15 +39,15 @@
 			android:label="@string/nShedule"
 			android:launchMode="singleInstance" />
 		<activity
-			android:name=".LinkActivity"
-			android:label="@string/nLink"
+			android:name=".ContactActivity"
+			android:label="@string/nContact"
 			android:launchMode="singleInstance" />
 		<activity
 			android:name=".MapActivity"
 			android:label="@string/nMap"
 			android:launchMode="singleInstance" />
 		<activity
-			android:name=".FactoryInfoActivity"
+			android:name=".EnterpriseInfoActivity"
 			android:theme="@style/Theme.AppCompat.Dialog" />
 
 		<service

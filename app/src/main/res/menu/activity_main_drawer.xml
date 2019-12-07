@@ -15,17 +15,17 @@
 			android:icon="@drawable/ic_rating"
 			android:title="@string/nRating" />
 		<item
-			android:id="@+id/nav_factory"
-			android:icon="@drawable/ic_factory"
-			android:title="@string/nFactory" />
+			android:id="@+id/nav_enterprise"
+			android:icon="@drawable/ic_enterprise"
+			android:title="@string/nEnterprise" />
 		<item
 			android:id="@+id/nav_map"
 			android:icon="@drawable/ic_map"
 			android:title="@string/nMap" />
 		<item
-			android:id="@+id/nav_link"
-			android:icon="@drawable/ic_link"
-			android:title="@string/nLink" />
+			android:id="@+id/nav_contact"
+			android:icon="@drawable/ic_contact"
+			android:title="@string/nContact" />
 	</group>
 
 </menu>
