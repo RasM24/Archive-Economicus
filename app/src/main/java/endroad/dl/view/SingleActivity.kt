@@ -10,7 +10,6 @@ import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import endroad.dl.EnterpisesActivity
 import endroad.dl.R
-import endroad.dl.RatingActivity
 import endroad.dl.ScheduleActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
@@ -46,11 +45,11 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 			R.id.nav_news    -> fragmentManager.changeRoot(NewsFragment.newInstance())
 			R.id.nav_contact -> fragmentManager.changeRoot(ContactFragment.newInstance())
 			R.id.nav_map     -> fragmentManager.changeRoot(MapFragment.newInstance())
+			R.id.nav_rating  -> fragmentManager.changeRoot(RatingFragment.newInstance())
 		}
 
 		val activity = when (item.itemId) {
 			R.id.nav_enterprise -> EnterpisesActivity::class.java
-			R.id.nav_rating     -> RatingActivity::class.java
 			R.id.nav_schedule   -> ScheduleActivity::class.java
 			else                -> null
 		}
