@@ -7,6 +7,5 @@ class App : Application() {
 	override fun onCreate() {
 		super.onCreate()
 		FirebaseDatabase.getInstance().setPersistenceEnabled(true)
-		loadLinkArrayFromAssets()
 	}
 }

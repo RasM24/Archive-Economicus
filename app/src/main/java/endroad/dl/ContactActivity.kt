@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import endroad.dl.data.ContactDataSource
 import endroad.dl.models.Contact
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.endroad.arena.data.CircleTransform
@@ -22,6 +23,8 @@ class ContactActivity : ActivityExtendNavigation() {
 
 	private val mLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
 
+	private val contactDataSource = ContactDataSource()
+
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
@@ -29,7 +32,7 @@ class ContactActivity : ActivityExtendNavigation() {
 		recycleList.setHasFixedSize(true)
 		recycleList.layoutManager = mLayoutManager
 		recycleList.addItemDecoration(DividerItemDecoration(baseContext, mLayoutManager.orientation))
-		recycleList.adapter = LinkAdapter(linkList)
+		recycleList.adapter = LinkAdapter(contactDataSource.getContactList())
 	}
 
 	override fun onClick(view: View) {}
