@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
 import kotlinx.android.synthetic.main.activity_main_navigation.*
 import ru.endroad.arena.viewlayer.activity.AppBarActivity
+import ru.endroad.navigation.changeRoot
 
 class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,11 +39,14 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 	}
 
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
+		when (item.itemId) {
+			R.id.nav_news -> fragmentManager.changeRoot(NewsFragment.newInstance())
+		}
+
 		val activity = when (item.itemId) {
 			R.id.nav_enterprise -> EnterpisesActivity::class.java
 			R.id.nav_contact    -> ContactActivity::class.java
 			R.id.nav_map        -> MapActivity::class.java
-			R.id.nav_news       -> NewsActivity::class.java
 			R.id.nav_rating     -> RatingActivity::class.java
 			R.id.nav_schedule   -> ScheduleActivity::class.java
 			else                -> null
@@ -60,7 +64,7 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 	}
 
 	override fun onFirstCreate() {
-		//fragmentManager.changeWithoutBackStack(WayListFragment.getInstance())
+		fragmentManager.changeRoot(NewsFragment.newInstance())
 	}
 
 	fun onClickCommunity(view: View) {

@@ -1,18 +1,19 @@
-package endroad.dl
+package endroad.dl.view
 
-import android.os.Bundle
-import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.Query
+import endroad.dl.R
 import endroad.dl.ViewHolders.*
+import endroad.dl.databaseReference
 import endroad.dl.models.News
 import kotlinx.android.synthetic.main.activity_list.*
+import ru.endroad.arena.viewlayer.fragment.BaseFragment
 
-class NewsActivity : ActivityExtendNavigation() {
-
-	override val idChecked = R.id.nav_news
+//TODO перевести на ListFragment
+class NewsFragment : BaseFragment() {
 
 	val query: Query = databaseReference.child(News.NEWS_COMMON)
 
@@ -22,23 +23,24 @@ class NewsActivity : ActivityExtendNavigation() {
 		}
 	}
 
-	private val linearLayoutManager = LinearLayoutManager(this).apply {
-		reverseLayout = true
-		stackFromEnd = true
-	}
+	override val layout = R.layout.base_fragment_list
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_list)
+	//Избыточность BaseFragment.. Уберется в будущем из модуля Arena
+	override fun setupViewModel() {
+
+		val linearLayoutManager = LinearLayoutManager(requireContext()).apply {
+			reverseLayout = true
+			stackFromEnd = true
+		}
 
 		list.setHasFixedSize(true)
 		list.layoutManager = linearLayoutManager
-		val mDividerItemDecoration = DividerItemDecoration(baseContext,
-														   linearLayoutManager.orientation)
-		list.addItemDecoration(mDividerItemDecoration)
+		list.addItemDecoration(DividerItemDecoration(requireContext(), linearLayoutManager.orientation))
 
 		list.adapter = firebaseAdapter
 	}
 
-	override fun onClick(view: View) {}
+	companion object {
+		fun newInstance(): Fragment = NewsFragment()
+	}
 }
