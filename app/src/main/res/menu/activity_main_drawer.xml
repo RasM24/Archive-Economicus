@@ -15,9 +15,9 @@
 			android:icon="@drawable/ic_rating"
 			android:title="@string/nRating" />
 		<item
-			android:id="@+id/nav_factory"
-			android:icon="@drawable/ic_factory"
-			android:title="@string/nFactory" />
+			android:id="@+id/nav_enterprise"
+			android:icon="@drawable/ic_enterprise"
+			android:title="@string/nEnterprise" />
 		<item
 			android:id="@+id/nav_map"
 			android:icon="@drawable/ic_map"
