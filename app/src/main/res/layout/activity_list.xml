@@ -32,13 +32,13 @@
 
 
 		<androidx.recyclerview.widget.RecyclerView
-			android:id="@+id/recycleList"
+			android:id="@+id/list"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 	</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-	<include layout="@layout/navigation_drawer" />
+	<include layout="@layout/activity_main_navigation" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

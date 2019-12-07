@@ -36,6 +36,6 @@
 
 	</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-	<include layout="@layout/navigation_drawer" />
+	<include layout="@layout/activity_main_navigation" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -29,10 +29,10 @@ class ContactActivity : ActivityExtendNavigation() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
 
-		recycleList.setHasFixedSize(true)
-		recycleList.layoutManager = mLayoutManager
-		recycleList.addItemDecoration(DividerItemDecoration(baseContext, mLayoutManager.orientation))
-		recycleList.adapter = LinkAdapter(contactDataSource.getContactList())
+		list.setHasFixedSize(true)
+		list.layoutManager = mLayoutManager
+		list.addItemDecoration(DividerItemDecoration(baseContext, mLayoutManager.orientation))
+		list.adapter = LinkAdapter(contactDataSource.getContactList())
 	}
 
 	override fun onClick(view: View) {}

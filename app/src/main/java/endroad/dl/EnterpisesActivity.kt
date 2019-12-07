@@ -29,11 +29,11 @@ class EnterpisesActivity : ActivityExtendNavigation() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
 
-		recycleList.setHasFixedSize(true)
+		list.setHasFixedSize(true)
 		val linearLayoutManager = LinearLayoutManager(this)
-		recycleList.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
-		recycleList.layoutManager = linearLayoutManager
-		recycleList.adapter = EnterpriseAdapter(enterpriseDataSource.getList(), this)
+		list.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
+		list.layoutManager = linearLayoutManager
+		list.adapter = EnterpriseAdapter(enterpriseDataSource.getList(), this)
 	}
 
 	override fun onClick(view: View) {}

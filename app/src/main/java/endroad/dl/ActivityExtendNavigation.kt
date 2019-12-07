@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_list.*
-import kotlinx.android.synthetic.main.navigation_drawer.*
+import kotlinx.android.synthetic.main.activity_main_navigation.*
 
 abstract class ActivityExtendNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
 										  View.OnClickListener {

@@ -31,13 +31,13 @@ class NewsActivity : ActivityExtendNavigation() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
 
-		recycleList.setHasFixedSize(true)
-		recycleList.layoutManager = linearLayoutManager
+		list.setHasFixedSize(true)
+		list.layoutManager = linearLayoutManager
 		val mDividerItemDecoration = DividerItemDecoration(baseContext,
 														   linearLayoutManager.orientation)
-		recycleList.addItemDecoration(mDividerItemDecoration)
+		list.addItemDecoration(mDividerItemDecoration)
 
-		recycleList.adapter = firebaseAdapter
+		list.adapter = firebaseAdapter
 	}
 
 	override fun onClick(view: View) {}

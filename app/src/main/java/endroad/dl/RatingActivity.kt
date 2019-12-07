@@ -31,11 +31,11 @@ class RatingActivity : ActivityExtendNavigation() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)
 
-		recycleList.setHasFixedSize(true)
-		recycleList.layoutManager = linearLayoutManager
-		recycleList.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
+		list.setHasFixedSize(true)
+		list.layoutManager = linearLayoutManager
+		list.addItemDecoration(DividerItemDecoration(baseContext, linearLayoutManager.orientation))
 
-		recycleList.adapter = firebaseAdapter
+		list.adapter = firebaseAdapter
 	}
 
 	override fun onClick(view: View) {}
