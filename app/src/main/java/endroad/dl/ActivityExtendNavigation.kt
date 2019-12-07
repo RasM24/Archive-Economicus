@@ -52,7 +52,6 @@ abstract class ActivityExtendNavigation : AppCompatActivity(), NavigationView.On
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		val activity = when (item.itemId) {
 			R.id.nav_enterprise -> EnterpisesActivity::class.java
-			R.id.nav_contact    -> ContactActivity::class.java
 			R.id.nav_map        -> MapActivity::class.java
 			R.id.nav_rating     -> RatingActivity::class.java
 			R.id.nav_schedule   -> ScheduleActivity::class.java
