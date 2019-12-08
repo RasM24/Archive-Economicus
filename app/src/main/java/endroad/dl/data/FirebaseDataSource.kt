@@ -2,8 +2,8 @@ package endroad.dl.data
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import endroad.dl.databaseReference
 import endroad.dl.models.News
 import endroad.dl.models.Schedule
 
@@ -22,8 +22,11 @@ class FirebaseDataSource {
 	}
 
 	private inline fun <reified T : Any> getListData(source: String, crossinline callback: (List<T>) -> Unit) {
-		databaseReference.child(source).addListenerForSingleValueEvent(
-			object : ValueEventListener {
+		FirebaseDatabase
+			.getInstance()
+			.reference
+			.child(source)
+			.addListenerForSingleValueEvent(object : ValueEventListener {
 				override fun onDataChange(dataSnapshot: DataSnapshot) {
 					val values = dataSnapshot
 						.children
@@ -34,7 +37,7 @@ class FirebaseDataSource {
 
 				override fun onCancelled(databaseError: DatabaseError) {}
 			}
-		)
+			)
 	}
 
 	companion object {
