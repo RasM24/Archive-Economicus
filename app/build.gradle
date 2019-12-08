@@ -47,9 +47,8 @@ dependencies {
 	//Util
 	implementation 'com.squareup.picasso:picasso:2.71828'
 	implementation 'com.firebaseui:firebase-ui-database:1.0.1'
-	implementation 'com.google.firebase:firebase-auth:19.2.0'
+	implementation 'com.mikepenz:fastadapter:4.1.0'
 	implementation 'com.google.firebase:firebase-database:19.2.0'
-	implementation 'com.google.firebase:firebase-messaging:20.0.1'
 	implementation 'ru.endroad:arena:2.1.3'
 	implementation 'ru.endroad.camp:fragment-navigation:1.0.0'
 }
