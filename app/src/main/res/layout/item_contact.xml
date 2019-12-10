@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/item_contact"
 	android:layout_width="match_parent"
-	android:layout_height="90dp"
+	android:layout_height="wrap_content"
 	android:orientation="horizontal"
-	android:padding="5dp">
+	android:padding="8dp">
 
 	<ImageView
 		android:id="@+id/image"
-		android:layout_width="70dp"
-		android:layout_height="70dp"
-		android:layout_gravity="center_vertical" />
+		android:layout_width="72dp"
+		android:layout_height="72dp"
+		android:layout_gravity="center_vertical"
+		android:layout_margin="8dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@tools:sample/avatars" />
 
-	<LinearLayout
+	<ImageView
+		android:id="@+id/vk_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="16dp"
+		android:background="@drawable/ic_vkontakte_small"
+		app:layout_constraintStart_toEndOf="@+id/image"
+		app:layout_constraintTop_toTopOf="@+id/image" />
+
+	<TextView
+		android:id="@+id/post"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:layout_marginStart="8dp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toBottomOf="@+id/vk_icon"
+		app:layout_constraintStart_toEndOf="@+id/vk_icon"
+		app:layout_constraintTop_toTopOf="@+id/vk_icon"
+		tools:text="Старший советник" />
+
+	<TextView
+		android:id="@+id/name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="@+id/image"
+		app:layout_constraintStart_toStartOf="@+id/vk_icon"
+		app:layout_constraintTop_toBottomOf="@+id/divider"
+		tools:text="кот Матроскин" />
+
+	<View
+		android:id="@+id/divider"
 		android:layout_width="0dp"
-		android:layout_height="match_parent"
-		android:layout_weight="1"
-		android:orientation="vertical"
-		android:padding="5dp">
+		android:layout_height="1dp"
+		android:layout_marginEnd="64dp"
+		android:background="@color/divider"
+		app:layout_constraintBottom_toBottomOf="@+id/image"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/vk_icon"
+		app:layout_constraintTop_toTopOf="@+id/image"
+		app:layout_constraintVertical_bias="0.4" />
 
-		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:paddingBottom="5dp">
-
-			<ImageView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="bottom"
-				android:background="@drawable/ic_vk_small" />
-
-			<TextView
-				android:id="@+id/post"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_gravity="bottom"
-				android:paddingLeft="2dp"
-				android:textStyle="bold" />
-
-		</LinearLayout>
-
-		<ImageView
-			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:layout_marginRight="60dp"
-			android:layout_weight="0"
-			android:background="#4CCC" />
-
-		<TextView
-			android:id="@+id/name"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_weight="3"
-			android:gravity="center_vertical"
-			android:paddingLeft="10dp" />
-	</LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

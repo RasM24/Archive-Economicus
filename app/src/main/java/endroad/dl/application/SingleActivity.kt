@@ -1,10 +1,7 @@
 package endroad.dl.application
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
@@ -13,6 +10,8 @@ import endroad.dl.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_content.*
 import kotlinx.android.synthetic.main.activity_main_navigation.*
+import kotlinx.android.synthetic.main.navigation_community.*
+import ru.endroad.arena.data.startUrl
 import ru.endroad.arena.viewlayer.activity.AppBarActivity
 import ru.endroad.navigation.changeRoot
 
@@ -30,23 +29,24 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setSupportActionBar(toolbar)
-		nav_view_footer.setNavigationItemSelectedListener(this)
-		nav_view_menu.setNavigationItemSelectedListener(this)
-		nav_view_menu.setCheckedItem(R.id.nav_news)
+		//nav_view_footer.setNavigationItemSelectedListener(this)
+		navigation_menu.setNavigationItemSelectedListener(this)
+		navigation_menu.setCheckedItem(R.id.navigation_news)
 
 		val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
 		drawer.addDrawerListener(toggle)
 		toggle.syncState()
+		setupViewComponent()
 	}
 
 	override fun onNavigationItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
-			R.id.nav_schedule   -> fragmentManager.changeRoot(ScheduleFragment.newInstance())
-			R.id.nav_news       -> fragmentManager.changeRoot(NewsFragment.newInstance())
-			R.id.nav_rating     -> fragmentManager.changeRoot(RatingFragment.newInstance())
-			R.id.nav_enterprise -> fragmentManager.changeRoot(EnterprisesFragment.newInstance())
-			R.id.nav_map        -> fragmentManager.changeRoot(MapFragment.newInstance())
-			R.id.nav_contact    -> fragmentManager.changeRoot(ContactFragment.newInstance())
+			R.id.navigation_schedule   -> fragmentManager.changeRoot(ScheduleFragment.newInstance())
+			R.id.navigation_news       -> fragmentManager.changeRoot(NewsFragment.newInstance())
+			R.id.navigation_rating     -> fragmentManager.changeRoot(RatingFragment.newInstance())
+			R.id.navigation_enterprise -> fragmentManager.changeRoot(EnterprisesFragment.newInstance())
+			R.id.navigation_map        -> fragmentManager.changeRoot(MapFragment.newInstance())
+			R.id.navigation_contact    -> fragmentManager.changeRoot(ContactFragment.newInstance())
 		}
 
 		drawer.closeDrawer(GravityCompat.START)
@@ -57,17 +57,10 @@ class SingleActivity : AppBarActivity(), NavigationView.OnNavigationItemSelected
 		fragmentManager.changeRoot(NewsFragment.newInstance())
 	}
 
-	fun onClickCommunity(view: View) {
-		val address: Uri? = when (view.id) {
-			R.id.nav_vk    -> Uri.parse(LINK_VK)
-			R.id.nav_insta -> Uri.parse(LINK_INSTA)
-			R.id.nav_fb    -> Uri.parse(LINK_FB)
-			else           -> null
-		}
-
-		address
-			?.run { Intent(Intent.ACTION_VIEW, this) }
-			?.let(::startActivity)
+	private fun setupViewComponent() {
+		link_vkontakte.setOnClickListener { startUrl(LINK_VK) }
+		link_instagram.setOnClickListener { startUrl(LINK_INSTA) }
+		link_facebook.setOnClickListener { startUrl(LINK_FB) }
 	}
 
 	fun toEnterpriseInfo(position: Int) {

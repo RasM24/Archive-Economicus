@@ -1,52 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:orientation="vertical"
-	android:padding="20dp">
+	android:padding="16dp">
+
+	<ImageView
+		android:id="@+id/image"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@drawable/ic_enterprise" />
+
+	<TextView
+		android:id="@+id/title"
+		style="@style/TextAppearance.AppCompat.Title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="24dp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toBottomOf="@+id/image"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toEndOf="@+id/image"
+		app:layout_constraintTop_toTopOf="@+id/image"
+		tools:text="Котофабрика" />
+
+	<ImageView
+		android:id="@+id/divider"
+		android:layout_width="0dp"
+		android:layout_height="1dp"
+		android:layout_marginTop="16dp"
+		android:background="@color/divider"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/image" />
 
 	<ScrollView
-		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginEnd="16dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/divider">
 
-		<LinearLayout
+		<TextView
+			android:id="@+id/description"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="vertical">
-
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal">
-
-				<ImageView
-					android:id="@+id/image"
-					android:layout_width="60dp"
-					android:layout_height="60dp"
-					android:padding="7dp" />
-
-				<TextView
-					android:id="@+id/text_name"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center_vertical"
-					android:paddingLeft="10dp"
-					android:textColor="#333"
-					android:textStyle="bold" />
-			</LinearLayout>
-
-			<ImageView
-				android:layout_width="match_parent"
-				android:layout_height="1dp"
-				android:background="#A555" />
-
-			<TextView
-				android:id="@+id/text_information"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:paddingTop="5dp"
-				android:textColor="#333" />
-		</LinearLayout>
+			tools:text="Выпускает котов в широком ассортименте. На выбор худые и пухлые, шерстяные пушистики и лысые чудо" />
 	</ScrollView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

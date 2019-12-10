@@ -9,7 +9,7 @@ import endroad.dl.models.Schedule
 
 class ScheduleItem(item: Schedule) : ModelAbstractItem<Schedule, ScheduleItem.ViewHolder>(item) {
 
-	override val type = R.id.item_shedule
+	override val type = R.id.item_schedule
 
 	override val layoutRes = R.layout.item_shedule
 
@@ -22,6 +22,6 @@ class ScheduleItem(item: Schedule) : ModelAbstractItem<Schedule, ScheduleItem.Vi
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-		val mTextField: TextView = itemView.findViewById(R.id.text_information)
+		val mTextField: TextView = itemView.findViewById(R.id.description)
 	}
 }
