@@ -1,3 +1,3 @@
 package endroad.dl.models
 
-class News @JvmOverloads constructor(var imageURL: String? = null, var bodyText: String? = null)
+class News @JvmOverloads constructor(val imageURL: String? = null, val bodyText: String = "")
