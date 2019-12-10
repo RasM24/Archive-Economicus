@@ -11,19 +11,19 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
-		android:src="@drawable/ic_vk" />
+		android:src="@drawable/ic_vkontakte" />
 
 	<ImageView
 		android:id="@+id/link_instagram"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
-		android:src="@drawable/ic_insta" />
+		android:src="@drawable/ic_instagram" />
 
 	<ImageView
 		android:id="@+id/link_facebook"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
-		android:src="@drawable/ic_fb" />
+		android:src="@drawable/ic_facebook" />
 </LinearLayout>

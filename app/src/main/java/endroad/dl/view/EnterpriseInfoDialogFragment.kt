@@ -32,8 +32,8 @@ class EnterpriseInfoDialogFragment : DialogFragment() {
 
 		val enterprise = enterpriseDataSource.getByPosition(enterpriseId)
 
-		text_name.text = enterprise.name
-		text_information.text = Html.fromHtml(enterprise.information)
+		title.text = enterprise.name
+		description.text = Html.fromHtml(enterprise.information)
 		image.load(enterprise.imagePath)
 	}
 

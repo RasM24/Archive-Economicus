@@ -25,7 +25,7 @@ class EnterpriseItem(item: Enterprise) : ModelAbstractItem<Enterprise, Enterpris
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-		val image: ImageView = root.findViewById(R.id.avatar)
-		val name: TextView = root.findViewById(R.id.text_name)
+		val image: ImageView = root.findViewById(R.id.image)
+		val name: TextView = root.findViewById(R.id.title)
 	}
 }

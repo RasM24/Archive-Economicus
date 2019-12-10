@@ -25,7 +25,7 @@ class NewsItem(item: News) : ModelAbstractItem<News, NewsItem.ViewHolder>(item) 
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-		val mImageField: ImageView = root.findViewById(R.id.avatar)
-		val mTextField: TextView = root.findViewById(R.id.text_body)
+		val mImageField: ImageView = root.findViewById(R.id.image)
+		val mTextField: TextView = root.findViewById(R.id.information)
 	}
 }

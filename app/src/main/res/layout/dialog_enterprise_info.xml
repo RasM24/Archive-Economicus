@@ -18,7 +18,7 @@
 		tools:src="@drawable/ic_enterprise" />
 
 	<TextView
-		android:id="@+id/text_name"
+		android:id="@+id/title"
 		style="@style/TextAppearance.AppCompat.Title"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 		app:layout_constraintTop_toBottomOf="@id/divider">
 
 		<TextView
-			android:id="@+id/text_information"
+			android:id="@+id/description"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			tools:text="Выпускает котов в широком ассортименте. На выбор худые и пухлые, шерстяные пушистики и лысые чудо" />

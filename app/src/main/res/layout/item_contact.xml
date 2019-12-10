@@ -9,7 +9,7 @@
 	android:padding="8dp">
 
 	<ImageView
-		android:id="@+id/avatar"
+		android:id="@+id/image"
 		android:layout_width="72dp"
 		android:layout_height="72dp"
 		android:layout_gravity="center_vertical"
@@ -25,9 +25,9 @@
 		android:layout_height="wrap_content"
 		android:layout_gravity="bottom"
 		android:layout_marginStart="16dp"
-		android:background="@drawable/ic_vk_small"
-		app:layout_constraintStart_toEndOf="@+id/avatar"
-		app:layout_constraintTop_toTopOf="@+id/avatar" />
+		android:background="@drawable/ic_vkontakte_small"
+		app:layout_constraintStart_toEndOf="@+id/image"
+		app:layout_constraintTop_toTopOf="@+id/image" />
 
 	<TextView
 		android:id="@+id/post"
@@ -45,7 +45,7 @@
 		android:id="@+id/name"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		app:layout_constraintBottom_toBottomOf="@+id/avatar"
+		app:layout_constraintBottom_toBottomOf="@+id/image"
 		app:layout_constraintStart_toStartOf="@+id/vk_icon"
 		app:layout_constraintTop_toBottomOf="@+id/divider"
 		tools:text="кот Матроскин" />
@@ -56,10 +56,10 @@
 		android:layout_height="1dp"
 		android:layout_marginEnd="64dp"
 		android:background="@color/divider"
-		app:layout_constraintBottom_toBottomOf="@+id/avatar"
+		app:layout_constraintBottom_toBottomOf="@+id/image"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="@+id/vk_icon"
-		app:layout_constraintTop_toTopOf="@+id/avatar"
+		app:layout_constraintTop_toTopOf="@+id/image"
 		app:layout_constraintVertical_bias="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

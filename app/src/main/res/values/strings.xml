@@ -1,11 +1,11 @@
 <resources>
 	<string name="app_name">Economicus</string>
-	<string name="nShedule">Расписание</string>
-	<string name="nNews">Новости</string>
-	<string name="nRating">Рейтинг</string>
-	<string name="nEnterprise">Список предприятий</string>
-	<string name="nMap">Карта</string>
-	<string name="nContact">Обратная связь</string>
+	<string name="navigation_schedule">Расписание</string>
+	<string name="navigation_news">Новости</string>
+	<string name="navigation_rating">Рейтинг</string>
+	<string name="navigation_enterprise">Список предприятий</string>
+	<string name="navigation_map">Карта</string>
+	<string name="navigation_contact">Обратная связь</string>
 
 
 	<string name="navigation_drawer_open">Open navigation drawer</string>

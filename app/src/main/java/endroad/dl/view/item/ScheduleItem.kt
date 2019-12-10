@@ -22,6 +22,6 @@ class ScheduleItem(item: Schedule) : ModelAbstractItem<Schedule, ScheduleItem.Vi
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-		val mTextField: TextView = itemView.findViewById(R.id.text_information)
+		val mTextField: TextView = itemView.findViewById(R.id.description)
 	}
 }

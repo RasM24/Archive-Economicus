@@ -27,7 +27,7 @@ class ContactItem(item: Contact) : ModelAbstractItem<Contact, ContactItem.ViewHo
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-		val image: ImageView = root.findViewById(R.id.avatar)
+		val image: ImageView = root.findViewById(R.id.image)
 		val post: TextView = root.findViewById(R.id.name)
 		val name: TextView = root.findViewById(R.id.post)
 	}

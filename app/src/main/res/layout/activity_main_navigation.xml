@@ -6,11 +6,11 @@
 	android:layout_height="match_parent"
 	android:layout_gravity="start"
 	android:fitsSystemWindows="true"
-	app:headerLayout="@layout/nav_header_main"
-	app:menu="@menu/activity_main_drawer">
+	app:headerLayout="@layout/navigation_header"
+	app:menu="@menu/navigation_menu">
 
 	<include
-		layout="@layout/nav_footer_community"
+		layout="@layout/navigation_community"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_gravity="bottom" />

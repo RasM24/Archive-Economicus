@@ -8,14 +8,14 @@
 	android:padding="16dp">
 
 	<TextView
-		android:id="@+id/text_body"
+		android:id="@+id/information"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:paddingBottom="16dp"
 		tools:text="Срочные новости! Сегодня ночью отряд котов стырил все печеньки с кухни!" />
 
 	<ImageView
-		android:id="@+id/avatar"
+		android:id="@+id/image"
 		android:layout_width="match_parent"
 		android:layout_height="160dp"
 		android:background="@color/image_loader_background"
