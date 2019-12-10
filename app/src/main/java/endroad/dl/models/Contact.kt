@@ -1,3 +1,5 @@
 package endroad.dl.models
 
-data class Contact(val name: String, val post: String, val url: String, val imagePath: String)
+import androidx.annotation.DrawableRes
+
+data class Contact(val name: String, val post: String, val url: String, @DrawableRes val image: Int)

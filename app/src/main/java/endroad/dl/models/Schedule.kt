@@ -1,3 +1,3 @@
 package endroad.dl.models
 
-class Schedule @JvmOverloads constructor(var text: String? = null)
+class Schedule @JvmOverloads constructor(val text: String = "")

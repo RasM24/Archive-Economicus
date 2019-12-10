@@ -9,7 +9,6 @@ import androidx.fragment.app.DialogFragment
 import endroad.dl.R
 import endroad.dl.data.EnterpriseDataSource
 import kotlinx.android.synthetic.main.dialog_enterprise_info.*
-import ru.endroad.arena.data.load
 import ru.endroad.arena.viewlayer.extension.argument
 import ru.endroad.arena.viewlayer.extension.withArgument
 
@@ -34,7 +33,7 @@ class EnterpriseInfoDialogFragment : DialogFragment() {
 
 		title.text = enterprise.name
 		description.text = Html.fromHtml(enterprise.information)
-		image.load(enterprise.imagePath)
+		image.setImageResource(enterprise.image)
 	}
 
 	companion object {

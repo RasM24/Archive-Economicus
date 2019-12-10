@@ -23,7 +23,7 @@ class ContactItem(item: Contact) : ModelAbstractItem<Contact, ContactItem.ViewHo
 
 		holder.name.text = model.name
 		holder.post.text = model.post
-		holder.image.load(model.imagePath, CircleTransform())
+		holder.image.load(model.image, CircleTransform())
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
