@@ -9,7 +9,7 @@ import endroad.dl.models.Schedule
 
 class ScheduleItem(item: Schedule) : ModelAbstractItem<Schedule, ScheduleItem.ViewHolder>(item) {
 
-	override val type = R.id.item_shedule
+	override val type = R.id.item_schedule
 
 	override val layoutRes = R.layout.item_shedule
 

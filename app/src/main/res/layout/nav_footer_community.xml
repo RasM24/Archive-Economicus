@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
+	android:layout_height="wrap_content"
 	android:orientation="horizontal"
-	android:paddingBottom="10dp">
+	android:paddingTop="24dp"
+	android:paddingBottom="24dp">
 
 	<ImageView
-		android:id="@+id/nav_vk"
+		android:id="@+id/link_vkontakte"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_gravity="bottom"
 		android:layout_weight="1"
-		android:onClick="onClickCommunity"
-		app:srcCompat="@drawable/ic_vk" />
+		android:src="@drawable/ic_vk" />
 
 	<ImageView
-		android:id="@+id/nav_insta"
+		android:id="@+id/link_instagram"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_gravity="bottom"
 		android:layout_weight="1"
-		android:onClick="onClickCommunity"
-		app:srcCompat="@drawable/ic_insta" />
+		android:src="@drawable/ic_insta" />
 
 	<ImageView
-		android:id="@+id/nav_fb"
+		android:id="@+id/link_facebook"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_gravity="bottom"
 		android:layout_weight="1"
-		android:onClick="onClickCommunity"
-		app:srcCompat="@drawable/ic_fb" />
+		android:src="@drawable/ic_fb" />
 </LinearLayout>
