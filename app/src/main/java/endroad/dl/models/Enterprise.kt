@@ -1,3 +1,5 @@
 package endroad.dl.models
 
-data class Enterprise(val name: String, val information: String, val imagePath: String)
+import androidx.annotation.DrawableRes
+
+data class Enterprise(val name: String, val information: String, @DrawableRes val image: Int)

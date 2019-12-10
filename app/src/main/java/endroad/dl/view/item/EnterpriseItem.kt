@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.items.ModelAbstractItem
 import endroad.dl.R
 import endroad.dl.models.Enterprise
-import ru.endroad.arena.data.load
 
 class EnterpriseItem(item: Enterprise) : ModelAbstractItem<Enterprise, EnterpriseItem.ViewHolder>(item) {
 
@@ -21,7 +20,7 @@ class EnterpriseItem(item: Enterprise) : ModelAbstractItem<Enterprise, Enterpris
 		super.bindView(holder, payloads)
 
 		holder.name.text = model.name
-		holder.image.load(model.imagePath)
+		holder.image.setImageResource(model.image)
 	}
 
 	class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
